@@ -12,6 +12,11 @@ html {
   margin: auto;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
 /*Header*/
 
 #header {
@@ -49,16 +54,20 @@ header {
 
 header nav {
   align-items: flex-end;
-}
-
-header ul {
-  display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
+header ul {
+  display: flex;
+}
+
 header a {
   margin-right: 2rem;
+}
+
+header span {
+  display: none;
 }
 
 /*Banner*/
@@ -69,7 +78,7 @@ header a {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 30rem;
+  height: 31rem;
 }
 
 .overlay {
@@ -123,4 +132,170 @@ header a {
 #paper-icon {
   width: 3.5rem;
   height: auto;
+}
+
+/*Main Content - Info*/
+
+.site-container.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+}
+
+.info-holder {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 5%;
+
+}
+
+.info-holder h2 {
+  width: 10rem;
+  background-color: cadetblue;
+  color: white;
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+
+}
+
+/*Footer*/
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: azure;
+  height: 8.5rem;
+
+}
+
+footer img {
+  height: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 1rem;
+
+}
+
+@media only screen and (max-width: 960px) {
+  .site-container {
+    width: 100%;
+  }
+
+  #header {
+    margin-top: 0rem;
+  }
+
+  .overlay {
+    margin-top: 9rem;
+    left: 0rem;
+  }
+
+  .overlay h1 {
+    padding: 1.25rem 4rem;
+    margin-right: 2rem;
+    font-size: 1.33rem;
+  }
+
+  .banner {
+    height: 22rem;
+    background-position: center;
+  }
+
+  #banner {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+  /*Header-Mobile*/
+
+  header ul {
+    display: none;
+  }
+
+  header span {
+    display: inline-flex;
+    margin-right: 2rem;
+  }
+
+  /*Banner-Mobile*/
+
+  .overlay h1 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-right: 0rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .overlay {
+    margin-top: 13rem;
+  }
+
+  .banner {
+    height: 17rem;
+    background-position: left;
+  }
+
+  /*Content-Mobile*/
+
+  .site-container.icons {
+    flex-direction: column;
+    margin-top: 3.77rem;
+    margin-bottom: 3.77rem;
+  }
+
+  #ruler {
+    margin-top: 1.54rem;
+    margin-bottom: 1.54rem;
+  }
+
+  p {
+    font-size: 0.77rem;
+  }
+
+  .site-container.info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0rem;
+  }
+
+  .info-holder {
+    width: 100%;
+    margin-right: 0rem;
+  }
+
+  .info-holder h2 {
+    text-align: center;
+    padding-left: 0rem;
+    width: 100%;
+  }
+
+  .info-holder p {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 4rem;
+  }
+
+  /*Footer - Mobile*/
+
+  footer {
+    justify-content: center;
+  }
+
+  footer span {
+    display: none;
+  }
+
 }
